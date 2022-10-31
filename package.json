@@ -1,0 +1,36 @@
+{
+  "name": "vue2-teleport-component",
+  "version": "0.0.1",
+  "description": "the Teleport component for Vue2.",
+  "author": "Eason Chan",
+  "keywords": [
+    "teleport",
+    "vue2",
+    "component"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eas0nchan/vue2-teleport-component.git"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue2teleport.cjs",
+  "module": "./dist/vue2teleport.js",
+  "exports": {
+    ".": {
+      "require": "./dist/vue2teleport.cjs",
+      "import": "./dist/vue2teleport.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.2.0"
+  }
+}
