@@ -17,12 +17,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/vue2teleport.cjs",
-  "module": "./dist/vue2teleport.js",
+  "main": "./dist/vue2-teleport-component.cjs",
+  "module": "./dist/vue2-teleport-component.js",
   "exports": {
     ".": {
-      "require": "./dist/vue2teleport.cjs",
-      "import": "./dist/vue2teleport.js"
+      "require": "./dist/vue2-teleport-component.cjs",
+      "import": "./dist/vue2-teleport-component.js"
     }
   },
   "scripts": {
