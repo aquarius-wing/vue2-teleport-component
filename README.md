@@ -33,3 +33,12 @@ export default {
   component: { Teleport }
 }
 ```
+
+# TeleportProps
+
+```js
+{
+  // if the value is null or undefined, equivalent to disabled.
+  to: [String, Element]
+}
+```
