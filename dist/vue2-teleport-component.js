@@ -1,11 +1,23 @@
+function l(e) {
+  return e instanceof Element;
+}
+
+function o(e) {
+  return typeof e == "string";
+}
+
 const n = {
   name: "Teleport",
   props: {
     to: [String, Element]
   },
   mounted() {
-    const e = this.to, t = l(e) ? e : o(e) && e !== "" ? document.querySelector(e) : null;
-    this.$el && this.$el.parentElement !== t && t !== null && t.appendChild(this.$el);
+    const e1 = this.to;
+    const toEL = l(e1) ? e1 : o(e1) && e1 !== "" ? document.querySelector(e1) : null;
+    var e;
+    if (this.$el && this.$el.parentElement !== toEL && toEL !== null) {
+      toEL.appendChild(this.$el);
+    }
   },
   destroyed() {
     this.$el.remove();
@@ -22,3 +34,5 @@ n.install = function(e, { prefix: t = "" } = {}) {
 export {
   n as default
 };
+
+
