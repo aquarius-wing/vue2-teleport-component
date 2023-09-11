@@ -11,26 +11,20 @@ export default {
   props: {
     to: [String, Element]
   },
-  computed: {
-    toEl({ to }) {
-      return isElement(to) ? to : isString(to) && to !== '' ? document.querySelector(to) : null
-    }
-  },
-  watch: {
-    toEl: 'teleport'
-  },
   mounted() {
-    this.teleport()
+    const e1 = this.to;
+    const toEL = l(e1) ? e1 : o(e1) && e1 !== "" ? document.querySelector(e1) : null;
+    var e;
+    if (this.$el && this.$el.parentElement !== toEL && toEL !== null) {
+        toEL.appendChild(this.$el);
+    }
   },
   destroyed() {
     this.$el.remove()
   },
-  methods: {
-    teleport() {
-      if (this.$el && this.$el.parentElement !== this.toEl) this.toEl?.appendChild(this.$el)
-    }
-  },
+  methods: {},
   render() {
-    return this.$scopedSlots.default?.()
+    var e, t;
+    return (t = (e = this.$scopedSlots).default) == null ? void 0 : t.call(e);
   }
 }
